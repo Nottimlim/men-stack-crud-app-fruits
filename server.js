@@ -7,13 +7,10 @@ const Fruit = require("./models/fruit.js");
 const app = express();
 
 mongoose.connect(process.env.MONGODB_URI);
-
 mongoose.connection.on("connected", () => {
     console.log(`Connected to MongoDB ${mongoose.connection.name}`);
 })
-
 app.use(express.urlencoded({ extended: false }));
-
 app.listen(3000, () => {console.log("listening at 3000")});
 
 // GET /
@@ -31,6 +28,9 @@ app.get("/fruits", async (req, res) => {
 // GET /fruits/new
 app.get("/fruits/new", (req, res) => {
     res.render("fruits/new.ejs");
+});
+app.get("/fruits/:fruitId", (req, res) => {
+    res.send( `This route renders the show page for fruit id: ${req.params.fruitId}`);
 });
 
 // POST /fruits
