@@ -28,6 +28,11 @@ app.use(express.urlencoded({extended: false}));
 
 // POST /fruits
 app.post("/fruits", async (req, res) => {
-    console.log(req.body);
-    res.redirect("/fruits/new")
-});
+    if (req.body.isReadyToEat === "on") {
+      req.body.isReadyToEat = true;
+    } else {
+      req.body.isReadyToEat = false;
+    }
+    await Fruit.create(req.body);
+    res.redirect("/fruits/new");
+  });
