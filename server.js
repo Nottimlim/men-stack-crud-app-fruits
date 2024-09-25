@@ -23,3 +23,11 @@ app.get("/", async (req, res) => {
 app.get("/fruits/new", (req, res) => {
     res.render("fruits/new.ejs");
 });
+
+app.use(express.urlencoded({extended: false}));
+
+// POST /fruits
+app.post("/fruits", async (req, res) => {
+    console.log(req.body);
+    res.redirect("/fruits/new")
+});
