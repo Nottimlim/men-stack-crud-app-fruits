@@ -12,6 +12,8 @@ mongoose.connection.on("connected", () => {
     console.log(`Connected to MongoDB ${mongoose.connection.name}`);
 })
 
+app.use(express.urlencoded({ extended: false }));
+
 app.listen(3000, () => {console.log("listening at 3000")});
 
 // GET /
@@ -19,12 +21,15 @@ app.get("/", async (req, res) => {
     res.render("index.ejs");
 });
 
+// GET /fruits
+app.get("/fruits", async (req, res) => {
+    res.send("welcome to the index page")
+    });
+
 // GET /fruits/new
 app.get("/fruits/new", (req, res) => {
     res.render("fruits/new.ejs");
 });
-
-app.use(express.urlencoded({extended: false}));
 
 // POST /fruits
 app.post("/fruits", async (req, res) => {
@@ -35,4 +40,5 @@ app.post("/fruits", async (req, res) => {
     }
     await Fruit.create(req.body);
     res.redirect("/fruits/new");
+    console.log(req.body);
   });
