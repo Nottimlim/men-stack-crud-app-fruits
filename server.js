@@ -23,7 +23,9 @@ app.get("/", async (req, res) => {
 
 // GET /fruits
 app.get("/fruits", async (req, res) => {
-    res.send("welcome to the index page")
+    const allFruits = await Fruit.find();
+    console.log(allFruits); // logs furits
+    res.render("fruits/index.ejs", { fruits: allFruits });
     });
 
 // GET /fruits/new
@@ -39,6 +41,6 @@ app.post("/fruits", async (req, res) => {
       req.body.isReadyToEat = false;
     }
     await Fruit.create(req.body);
-    res.redirect("/fruits/new");
+    res.redirect("/fruits");
     console.log(req.body);
   });
