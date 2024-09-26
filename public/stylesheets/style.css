@@ -46,7 +46,25 @@ footer {
 }
 
 .fruits-index-link {
-    text-decoration: none;
+    margin-top: 15px;
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 1.4em;
+    width: 13em;
+    padding: 10px 15px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 5px var(--shadow-color);
+}
+
+.fruits-index-link:hover {
+    background-color: var(--hover-color);
+    box-shadow: 0 5px var(--secondary-color);
+}
+
+.fruits-index-link:active {
+    background-color: var(--secondary-color);
+    box-shadow: 0 2.5px var(--hover-color);
 }
 
 .index-link-text {
@@ -189,6 +207,11 @@ button:active {
 ul {
     display: flex;
     flex-wrap: wrap;
+}
+
+p {
+    font-size: 1em;
+    padding-top: 10px;
 }
 
 li {
