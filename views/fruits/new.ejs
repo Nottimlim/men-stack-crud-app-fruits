@@ -6,6 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create a Fruit</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
     <h1>Create a Dank Fruit!</h1>
@@ -13,9 +14,10 @@
     <form action = "/fruits" method="POST">
         <label for="name">Name: </label>
         <input type="text" name="name" id="name"/>
-        <label for="isReadyToEat">Ready to get blasted?</label>
-        <input type="checkbox" name="isReadyToEat" id="isReadyToEat"/>
-        
+        <div class="checkbox-div">
+        <label for="ready-to-eat">Ready to get blasted?</label>
+        <input type="checkbox" name="isReadyToEat" id="ready-to-eat"/>
+    </div>
         <input type="submit" value="Add Your Dank Fruit"/>
     </form>
   </body>
