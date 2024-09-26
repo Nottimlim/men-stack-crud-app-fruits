@@ -55,7 +55,7 @@ footer {
     font-size: 1.4em;
     width: 10em;
     padding: 5px 15px;
-    margin: 15px;
+    margin: 2px;
     border-radius: 25px;
     text-align: center;
     box-shadow: 0 5px var(--shadow-color);
@@ -232,18 +232,16 @@ li {
 
 .add-fruit {
     display: flex;
-    text-align: center;
     justify-content: center;
-    align-items: center;
     margin: 0 20px;
     text-decoration: none;
-    width: 6em;
+    width: 10em;
     background-color: var(--primary-color);
     border-radius: 30px;
     color: white;
     padding: 10px;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 img {
