@@ -291,6 +291,6 @@ img {
     }
 
     .add-fruit {
-        width: 100%;
+        box-sizing: border-box;
     }
 }
