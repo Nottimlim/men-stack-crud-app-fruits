@@ -1,21 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap");
 
+:root {
+    --background-color: #fff8ed;
+    --primary-font: "DM Sans", sans-serif;
+    --primary-color: #769642;
+    --secondary-color: #f47b5b;
+    --hover-color: #ffbd59;
+    --active-color: #2d4d3a;
+    --shadow-color: #ffbd59;
+    --highlight-color: rgb(217, 108, 78);
+}
+
 body {
-    background: #fff8ed;
-    font-family: "DM Sans", sans-serif;
+    background: var(--background-color);
+    font-family: var(--primary-font);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     max-width: 100vw;
-  }
-  
-  h1 {
-    color: #769642;
+}
+
+h1 {
+    color: var(--primary-color);
     font-size: 3.6em;
-  }
-  
-  footer {
+}
+
+footer {
     font-size: 0.7em;
     position: fixed;
     left: 0;
@@ -23,18 +34,18 @@ body {
     width: 100%;
     text-align: center;
     padding: 10px;
-  }
-  
-  .fruit-pic1 {
-    height: 30%;
-  }
+}
 
-  .fruits-index-link {
+.fruit-pic1 {
+    height: 30%;
+}
+
+.fruits-index-link {
     text-decoration: none;
-  }
-  
-  .index-link-text {
-    background-color: #f47b5b;
+}
+
+.index-link-text {
+    background-color: var(--secondary-color);
     color: white;
     font-size: 1.4em;
     width: 10em;
@@ -42,61 +53,61 @@ body {
     margin: 15px;
     border-radius: 25px;
     text-align: center;
-    box-shadow: 0 5px #ffbd59;
-  }
-  
-  .index-link-text:hover {
-    background-color: #ffbd59;
-    box-shadow: 0 5px #f47b5b;
-  }
-  
-  .index-link-text:active {
-    background-color: #f47b5b;
-    box-shadow: 0 2.5px #ffbd59;
-  }
+    box-shadow: 0 5px var(--shadow-color);
+}
 
-  form {
-    font-family: "DM Sans", sans-serif;
+.index-link-text:hover {
+    background-color: var(--hover-color);
+    box-shadow: 0 5px var(--secondary-color);
+}
+
+.index-link-text:active {
+    background-color: var(--secondary-color);
+    box-shadow: 0 2.5px var(--hover-color);
+}
+
+form {
+    font-family: var(--primary-font);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background-color: #ffbd59;
+    background-color: var(--hover-color);
     padding: 20px 30px;
     border-radius: 20px;
-    box-shadow: 5px 6px #f47b5b;
+    box-shadow: 5px 6px var(--secondary-color);
     margin: 20px 10px;
-  }
-  
-  .checkbox-div {
+}
+
+.checkbox-div {
     flex-direction: row;
-  }
-  
-  label,
-  input {
+}
+
+label,
+input {
     margin: 10px 2px 0 2px;
-  }
-  
-  button {
+}
+
+button {
     align-self: center;
     margin: 10px 4px 4px 4px;
-    background-color: #3f6a51;
+    background-color: var(--primary-color);
     color: white;
     padding: 5px 10px;
     border-radius: 15px;
     border: none;
     width: 15em;
-  }
-  
-  button:hover {
-    background-color: #769642;
-  }
-  
-  button:active {
-    background-color: #2d4d3a;
-  }
-  
-  .fruit-actions {
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+button:active {
+    background-color: var(--active-color);
+}
+
+.fruit-actions {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -104,33 +115,33 @@ body {
     width: 100%;
     height: 130px;
     padding: 20px 0;
-  }
-  
-  .delete-form {
+}
+
+.delete-form {
     padding: 0;
     box-shadow: 0 0;
     background-color: transparent;
     height: 50px;
     margin: 0 20px 0 0;
     min-height: 100%;
-  }
-  .delete-button {
-    background-color: #f47b5b;
+}
+
+.delete-button {
+    background-color: var(--secondary-color);
     text-transform: uppercase;
     padding: 40px 15px;
     width: 70%;
-    /* height: 100%; */
     font-size: 1.3em;
     margin: 0;
     min-height: 100%;
-  }
-  
-  .edit-link {
+}
+
+.edit-link {
     text-decoration: none;
-  }
-  
-  .edit-text {
-    background-color: #3f6a51;
+}
+
+.edit-text {
+    background-color: var(--primary-color);
     text-transform: uppercase;
     padding: 40px 15px;
     font-size: 1.3em;
@@ -143,37 +154,36 @@ body {
     text-align: center;
     width: 70%;
     height: 50px;
-  }
-  
-  .delete-button:hover {
-    background-color: #ffbd59;
-  }
-  
-  .delete-button:active {
-    background-color: rgb(217, 108, 78);
-  }
-  
-  .edit-text:hover {
-    background-color: #769642;
-  }
-  
-  .edit-text:active {
-    background-color: #2d4d3a;
-    background-color: rgb(217, 108, 78);
-  }
-  
+}
+
+.delete-button:hover {
+    background-color: var(--hover-color);
+}
+
+.delete-button:active {
+    background-color: var(--highlight-color);
+}
+
+.edit-text:hover {
+    background-color: var(--hover-color);
+}
+
+.edit-text:active {
+    background-color: var(--highlight-color);
+}
+
 /* index styling */
 
 ul {
     display: flex;
     flex-wrap: wrap;
-  }
-  
-  li {
+}
+
+li {
     list-style: none;
-  }
-  
-  .fruit-cards {
+}
+
+.fruit-cards {
     display: flex;
     flex-direction: column;
     text-decoration: none;
@@ -186,28 +196,28 @@ ul {
     border-radius: 15px;
     align-items: center;
     justify-content: center;
-    border: 2.5px solid #ffbd59;
-  }
-  
-  .fruit-cards:hover {
-    border: 4px solid #f47b5b;
-  }
-  
-  .fruit-cards:active {
+    border: 2.5px solid var(--hover-color);
+}
+
+.fruit-cards:hover {
+    border: 4px solid var(--secondary-color);
+}
+
+.fruit-cards:active {
     background-color: #a4cf5f67;
-    border: 2.5px solid #ffbd59;
+    border: 2.5px solid var(--hover-color);
     color: gray;
-  }
-  
-  .index-header-div {
+}
+
+.index-header-div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 98%;
-  }
-  
-  .add-fruit {
+}
+
+.add-fruit {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,17 +225,36 @@ ul {
     text-decoration: none;
     width: 6em;
     text-transform: uppercase;
-    background-color: #769642;
+    background-color: var(--primary-color);
     border-radius: 30px;
     color: white;
     padding: 10px;
     font-weight: bold;
     font-size: 1.2em;
-  }
-  
-  img {
+}
+
+img {
     height: 100%;
     margin: 20px 0 0 0;
-  }
-  
-  
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.4em;
+    }
+
+    .index-link-text, button, .delete-button, .edit-text {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .fruit-cards {
+        width: 80px;
+        height: 100px;
+        padding: 20px 30px;
+    }
+
+    .add-fruit {
+        width: 100%;
+    }
+}
