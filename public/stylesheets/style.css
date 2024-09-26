@@ -9,6 +9,10 @@
     --active-color: #2d4d3a;
     --shadow-color: #ffbd59;
     --highlight-color: rgb(217, 108, 78);
+    --button-padding: 40px 15px;
+    --border-radius: 15px;
+    --font-size: 1.3em;
+    --button-width: 70%;
 }
 
 body {
@@ -81,11 +85,13 @@ form {
 
 .checkbox-div {
     flex-direction: row;
+    align-self: center;
 }
 
 label,
 input {
     margin: 10px 2px 0 2px;
+    align-self: center;
 }
 
 button {
@@ -129,9 +135,9 @@ button:active {
 .delete-button {
     background-color: var(--secondary-color);
     text-transform: uppercase;
-    padding: 40px 15px;
-    width: 70%;
-    font-size: 1.3em;
+    padding: var(--button-padding);
+    width: var(--button-width);
+    font-size: var(--font-size);
     margin: 0;
     min-height: 100%;
 }
@@ -143,18 +149,19 @@ button:active {
 .edit-text {
     background-color: var(--primary-color);
     text-transform: uppercase;
-    padding: 40px 15px;
-    font-size: 1.3em;
-    border-radius: 15px;
+    padding: var(--button-padding);
+    font-size: var(--font-size);
+    border-radius: var(--border-radius);
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     font-weight: bold;
     text-align: center;
-    width: 70%;
+    width: var(--button-width);
     height: 50px;
 }
+
 
 .delete-button:hover {
     background-color: var(--hover-color);
@@ -181,6 +188,7 @@ ul {
 
 li {
     list-style: none;
+    margin: 5px;
 }
 
 .fruit-cards {
@@ -211,7 +219,7 @@ li {
 
 .index-header-div {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 98%;
@@ -219,12 +227,12 @@ li {
 
 .add-fruit {
     display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
     margin: 0 20px;
     text-decoration: none;
     width: 6em;
-    text-transform: uppercase;
     background-color: var(--primary-color);
     border-radius: 30px;
     color: white;
@@ -243,7 +251,7 @@ img {
         font-size: 2.4em;
     }
 
-    .index-link-text, button, .delete-button, .edit-text {
+    .index-link-text, button, .delete-button, .edit-text, .edit-fruit-button {
         width: 100%;
         padding: 10px;
     }

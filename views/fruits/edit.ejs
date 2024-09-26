@@ -16,9 +16,10 @@
     <form action = "/fruits/<%=fruit._id%>?_method=PUT" method="POST">
         <label for="name">Name: </label>
         <input type="text" name="name" value="<%= fruit.name %>"/>
-        <label for="isReadyToEat">Ready to get blasted?</label>
-        <input type="checkbox" name="isReadyToEat" id="isReadyToEat" <% if (fruit.isReadyToEat) { %>checked<% } %> >
-        <button type="submit">Update The Dankiness of your Fruit</button>
+        <div class="checkbox-div">
+        <label for="isReadyToEat">Good to go?</label>
+        <input type="checkbox" name="isReadyToEat" id="isReadyToEat" <% if (fruit.isReadyToEat) { %>checked<% } %> > </div>
+        <button type="submit">Update Dank Fruit</button>
     </form>
   </body>
 </html>
