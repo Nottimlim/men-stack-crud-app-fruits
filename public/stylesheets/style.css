@@ -23,6 +23,7 @@ body {
     align-items: center;
     justify-content: center;
     max-width: 100vw;
+    text-align:center;
 }
 
 h1 {
@@ -68,6 +69,10 @@ footer {
 .index-link-text:active {
     background-color: var(--secondary-color);
     box-shadow: 0 2.5px var(--hover-color);
+}
+
+.fruit-details {
+    align-items: center;
 }
 
 form {
