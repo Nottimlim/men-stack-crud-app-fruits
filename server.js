@@ -57,3 +57,10 @@ app.post("/fruits", async (req, res) => {
     await Fruit.findByIdAndDelete(req.params.fruitId);
     res.redirect("/fruits");
   });
+
+  // GET /fruits/:fruitId/edit
+  app.get("/fruits/:fruitId/edit", async (req, res) => {
+    const foundFruit = await Fruit.findById(req.params.fruitId);
+    res.render("fruits/edit.ejs", { fruit: foundFruit });
+  });
+
