@@ -51,3 +51,9 @@ app.post("/fruits", async (req, res) => {
     res.redirect("/fruits");
     console.log(req.body);
   });
+
+  // GET /fruits/:fruitId/
+  app.delete("/fruits/:fruitId", async (req, res) => {
+    await Fruit.findByIdAndDelete(req.params.fruitId);
+    res.redirect("/fruits");
+  });
