@@ -37,6 +37,7 @@ app.get("/fruits", async (req, res) => {
 app.get("/fruits/new", (req, res) => {
     res.render("fruits/new.ejs");
 });
+
 app.get("/fruits/:fruitId", async (req, res) => {
     const foundFruit = await Fruit.findById(req.params.fruitId);
     res.render("fruits/show.ejs", { fruit: foundFruit });
@@ -67,7 +68,6 @@ app.post("/fruits", async (req, res) => {
   });
 
 // PUT /fruits/:fruitId
-// server.js
 
 app.put("/fruits/:fruitId", async (req, res) => {
     // Handle the 'isReadyToEat' checkbox data
